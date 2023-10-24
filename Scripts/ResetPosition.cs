@@ -12,7 +12,7 @@ public class ResetPosition : MonoBehaviour
     Vector3 originalPos;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Respawn");
+        if (collision.tag == "Respawn")
         {
             gameObject.transform.position = originalPos;
         }
