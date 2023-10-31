@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class ResetPosition : MonoBehaviour
+public class ResetBottom : MonoBehaviour
 {
     private void Start()
     {
@@ -12,11 +12,10 @@ public class ResetPosition : MonoBehaviour
     Vector3 originalPos;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Respawn")
+        if (collision.tag == "Bottom")
         {
             gameObject.transform.position = originalPos;
-            Plus.score += 5;
-            Debug.Log("score +5");
+            
         }
     }
 
