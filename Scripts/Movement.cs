@@ -1,14 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+    public Transform Offset;
+
+    public Projectile ProjectilePrefab;
+
+    public float speed = 0;
+    
     // Start is called before the first frame update
-
-    public float speed = 0; 
-
-
     void Start()
     {
         
@@ -22,5 +25,19 @@ public class Movement : MonoBehaviour
 
         // Move the player up or down
         transform.Translate(0, moveAmount, 0);
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Instantiate(ProjectilePrefab, Offset.position, transform.rotation);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Asteroid")
+        {
+            Destroy(this.gameObject);
+            Debug.Log("loser");
+        }
     }
 }
