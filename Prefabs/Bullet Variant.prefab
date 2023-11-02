@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2128911294123522370, guid: 585f061ed47186649858054f22a56700, type: 3}
       propertyPath: lifetime
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5047916895456007671, guid: 585f061ed47186649858054f22a56700, type: 3}
       propertyPath: m_Size.x

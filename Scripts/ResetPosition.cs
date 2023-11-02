@@ -16,7 +16,7 @@ public class ResetPosition : MonoBehaviour
         {
             gameObject.transform.position = originalPos;
             Plus.score += 5;
-            Debug.Log("score +5");
+            Debug.Log("score +10");
         }
     }
 
