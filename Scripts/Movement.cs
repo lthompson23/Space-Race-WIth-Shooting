@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class Movement : MonoBehaviour
@@ -59,6 +60,7 @@ public class Movement : MonoBehaviour
         {
             Destroy(this.gameObject);
             Debug.Log("loser");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 
